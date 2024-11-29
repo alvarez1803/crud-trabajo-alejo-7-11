@@ -39,6 +39,7 @@ export const createProduct = async(req: Request, res: Response) => {
     product.name = name;
     product.description = description;
     product.price = price;
+    product.imgUrl = imgUrl; 
 
     await productRepository.save(product);
     res.status(201).json(product);
@@ -50,7 +51,7 @@ export const createProduct = async(req: Request, res: Response) => {
 // PUT - Actualizar un Perrito existente
 export const updateProduct = async(req: Request, res: Response) => {
   try {
-    const { name, description, price } = req.body;
+    const { name, description, price, imgUrl } = req.body;
     const product = await productRepository.findOneBy({
       id: parseInt(req.params.id),
     });
@@ -59,6 +60,7 @@ export const updateProduct = async(req: Request, res: Response) => {
       product.name = name ?? product.name;
       product.description = description ?? product.description;
       product.price = price ?? product.price;
+      product.imgUrl = imgUrl ?? product.imgUrl;
 
       await productRepository.save(product);
       res.json(product);

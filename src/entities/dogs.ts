@@ -13,4 +13,7 @@ export class dogs {
 
   @Column("decimal")
   price!: number;
+
+  @Column("text")
+  imgUrl!: string;
 }
