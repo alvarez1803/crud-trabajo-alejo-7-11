@@ -65,6 +65,7 @@ productRoutes.get("/:id", getProductById);
  *               - name
  *               - description
  *               - price
+ *               -imgUrl
  *             properties:
  *               name:
  *                 type: string
@@ -72,6 +73,8 @@ productRoutes.get("/:id", getProductById);
  *                 type: string
  *               price:
  *                 type: number
+ *               imgUrl:
+ *                 type: string
  *     responses:
  *       201:
  *         description: Perro creado
@@ -106,6 +109,9 @@ productRoutes.post("/", createProduct);
  *                 type: string
  *               price:
  *                 type: number
+ *               imgUrl:
+ *                 type: string
+ * 
  *     responses:
  *       200:
  *         description: Perro actualizado
