@@ -34,7 +34,7 @@ export const getProductById = async(req: Request, res: Response) => {
 // POST - buscar nuevos perritos
 export const createProduct = async(req: Request, res: Response) => {
   try {
-    const { name, description, price } = req.body;
+    const { name, description, price, imgUrl } = req.body;
     const product = new dogs();
     product.name = name;
     product.description = description;

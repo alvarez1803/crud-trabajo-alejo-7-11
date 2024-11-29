@@ -65,7 +65,7 @@ productRoutes.get("/:id", getProductById);
  *               - name
  *               - description
  *               - price
- *               -imgUrl
+ *               - imgUrl
  *             properties:
  *               name:
  *                 type: string
